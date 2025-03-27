@@ -29,38 +29,22 @@
       font-size: 24px;
       font-weight: bold;
       text-align: center;
-      white-space: pre-line;
+      white-space: nowrap;
+      transform: translateX(-50%);
       animation: scrollText 9s linear infinite;
     }
 
-    .scrolling-text p {
-      margin: 0;
-      line-height: 0.4;
-    }
-
-    .scrolling-text::after {
-      content: "My iPhone is my catalog \A lyrihertz@gmail.com \A My iPhone is my catalog \A lyrihertz@gmail.com";
-      white-space: pre-line;
-    }
-
-    /* Make sure it snaps back instantly, eliminating any visible pause */
     @keyframes scrollText {
       0% {
         transform: translate(-50%, 100vh);
       }
-      99.999999% {
-        transform: translate(-50%, -100vh);
-      }
       100% {
-        transform: translate(-50%, 100vh);
+        transform: translate(-50%, -100vh);
       }
     }
 
     a {
-      color: black;
-      text-decoration: none;
-    }
-    a:hover {
+      color: blue;
       text-decoration: underline;
     }
   </style>
@@ -68,12 +52,8 @@
 <body>
   <div class="scrolling-container">
     <div class="scrolling-text">
-      <p>My iPhone is my catalog</p>
-      <p>
-        <a href="mailto:lyrihertz@gmail.com?subject=Fake%20it%20till%20you%20make%20it">
-          lyrihertz@gmail.com
-        </a>
-      </p>
+      My iPhone is my catalog<br/>
+      <a href="mailto:lyrihertz@gmail.com?subject=Fake%20it%20till%20you%20make%20it">lyrihertz@gmail.com</a>
     </div>
   </div>
 </body>
